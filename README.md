@@ -6,15 +6,15 @@ Enter two names, and Claude will generate creative combinations with "goodness" 
 
 ## Tech Stack
 
-| Layer          | Technology                              |
-| -------------- | --------------------------------------- |
-| Framework      | Next.js 16 (App Router)                 |
-| Language       | TypeScript                              |
-| Authentication | Auth.js v5 (NextAuth) + Google OAuth    |
-| Database       | PostgreSQL (Neon)                       |
-| ORM            | Prisma 6                                |
+| Layer          | Technology                                      |
+| -------------- | ----------------------------------------------- |
+| Framework      | Next.js 16 (App Router)                         |
+| Language       | TypeScript                                      |
+| Authentication | Auth.js v5 (NextAuth) + Google OAuth            |
+| Database       | PostgreSQL (Neon)                               |
+| ORM            | Prisma 6                                        |
 | AI             | Anthropic Claude API (claude-sonnet-4-20250514) |
-| Styling        | Tailwind CSS 4                          |
+| Styling        | Tailwind CSS 4                                  |
 
 ## Project Structure
 
@@ -135,6 +135,7 @@ Open [http://localhost:3000](http://localhost:3000). You'll be redirected to the
 Generate new name combinations.
 
 **Request:**
+
 ```json
 {
   "name1": "John",
@@ -143,6 +144,7 @@ Generate new name combinations.
 ```
 
 **Response:**
+
 ```json
 {
   "id": 1,
@@ -178,13 +180,13 @@ NameCombinationSet          GeneratedName
 
 ## Helpful Commands
 
-| Command              | Description                              |
-| -------------------- | ---------------------------------------- |
-| `npm run dev`        | Start development server                 |
-| `npm run build`      | Build for production                     |
-| `npm run db:push`    | Push schema to database (no migrations)  |
-| `npm run db:migrate` | Create and apply a migration             |
-| `npm run db:studio`  | Open Prisma Studio (visual DB browser)   |
+| Command              | Description                             |
+| -------------------- | --------------------------------------- |
+| `npm run dev`        | Start development server                |
+| `npm run build`      | Build for production                    |
+| `npm run db:push`    | Push schema to database (no migrations) |
+| `npm run db:migrate` | Create and apply a migration            |
+| `npm run db:studio`  | Open Prisma Studio (visual DB browser)  |
 
 ## Troubleshooting
 
@@ -192,3 +194,5 @@ NameCombinationSet          GeneratedName
 - **Google OAuth not working**: Make sure your redirect URI matches exactly: `http://localhost:3000/api/auth/callback/google`
 - **Database connection error**: Verify your `DATABASE_URL` includes `?sslmode=require` for Neon.
 - **Prisma client not found**: Run `npx prisma generate` after installing dependencies.
+
+Testing the workflow
