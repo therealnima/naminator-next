@@ -194,3 +194,10 @@ NameCombinationSet          GeneratedName
 - **Google OAuth not working**: Make sure your redirect URI matches exactly: `http://localhost:3000/api/auth/callback/google`
 - **Database connection error**: Verify your `DATABASE_URL` includes `?sslmode=require` for Neon.
 - **Prisma client not found**: Run `npx prisma generate` after installing dependencies.
+
+Why should .env.local never be committed? Becuase it stores the environment variable used for running the application on the local machine, which is therefore not useful to be pushed. Each machine has its own local environment variables
+
+Why are GitHub Secrets safer than plain environment variables? after storing them even you cannot see it again, but env files might accidentally be pushed to main.
+
+What would happen if you wrote the following in your yml file?
+if we hardcode the URL in our yml file , it gets pushed to main. The whole point of using secrets.DATABASE_URL is to use it in a way no one can see.
